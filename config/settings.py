@@ -126,3 +126,15 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+# Autenticación
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'catalogo'
+LOGOUT_REDIRECT_URL = 'home'
+
+# Mensajes
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'error',
+    messages.SUCCESS: 'success',
+    messages.WARNING: 'warning',
+}
